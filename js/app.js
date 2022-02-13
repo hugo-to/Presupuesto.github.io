@@ -1,11 +1,11 @@
 const ingresos = [
-    new Ingreso('Sueldo', 102100.00),
-    new Ingreso('Venta coche', 1500),
-    new Ingreso('Encuentra plata el perro', 5500),
+    new Ingreso('Sueldo', 5000.00),
+    new Ingreso('Venta Guitarra', 1500),
+    new Ingreso('Encuentra plata el perro', 43500),
 ];
 
 const egresos = [
-    new Egreso('Renta departamento', 900),
+    new Egreso('Alquiler', 900),
     new Egreso('Ropa', 400),
     new Egreso('Diamantes', 44400)
 ];
