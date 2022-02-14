@@ -39,8 +39,7 @@ body {
     background-size: cover;
     background-position: center;
     
-    background-image: linear-gradient(to left bottom, #93f8f8, #81edff, #9ddbff, #d2c4ff, #ffaaec);}
-
+background-image: linear-gradient(to bottom, #93f8f8, #b3f8ff, #d7f8ff, #f2f9ff, #ffffff);}
 .presupuesto {
     position: absolute;
     width: 350px;
@@ -93,7 +92,9 @@ body {
     width: 100%;
     height: 80%;
     border: #28b9b43f solid 1px;
+    
     display: flex;    
+    justify-content: center;
     top: 50%;
 }
 .presupuesto_ingreso {
