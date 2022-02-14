@@ -76,42 +76,169 @@ background-image: linear-gradient(to bottom, #93f8f8, #b3f8ff, #d7f8ff, #f2f9ff,
 }
 
 .formulario {
-    width: 100%;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100vw;
     max-width: 700px;
     margin: 0 auto;
-
     border-radius: 50px;
     background: linear-gradient(225deg, #ffffff, #e6e6e6);
     box-shadow:  -20px 20px 60px #d9d9d9,
                 20px -20px 60px #ffffff;
+                background: linear-gradient(225deg, #2bc6c2, #0d706d);
+                box-shadow:  10px -10px 30px #a2f5f3,
+                            -10px 10px 30px #abeeec;
     
 }
 
-.menu_contenedor {
-    position: absolute;
+select {
     width: 100%;
-    height: 80%;
-    border: #28b9b43f solid 1px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #e6e6e6, #ffffff);
+    box-shadow:  20px -20px 60px #d9d9d9,
+                -20px 20px 60px #ffffff;
     
-    display: flex;    
-    justify-content: center;
-    top: 50%;
 }
+div .agregar {
+    width: 100%;
+    max-width: 700px;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.menu_contenedor {
+    
+    width: 100vw;
+    height: 80%;
+    border-top: #28b9b43f solid 4px;
+    border-bottom: #28b9b43f solid 4px;
+    position: relative;
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+    
+
+}
+.ingreso_contenedor {
+    /* display: grid;
+    grid-template-columns: 1 / 2; */
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.egreso_contenedor {
+    /* display: grid;
+    grid-template-columns: 2 / 2; */
+    left: 100%;
+    top: 50%;
+    transform: translate(-0%, -50%);
+}
+
+@media (max-width: 600px) {
+    /* .cabecero {
+        height: 50vh;
+    }
+    .presupuesto {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+    }
+    .presupuesto_titulo{
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 10px;
+        font-weight: 300;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .presupuesto_valor {
+        font-weight: 300;
+        font-size: 46px;
+        text-align: center;
+        margin-bottom: 25px;
+        letter-spacing: 2px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .presupuesto_ingreso,
+    .presupuesto_egreso {
+        padding: 12px;
+        margin-top: 15px;
+        text-transform: uppercase;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 500;
+    }
+    .formulario {
+        font-size: 16px;
+        font-weight: 300;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        width: 100vw;
+        max-width: 700px;
+        margin: 0 auto;
+        border-radius: 50px;
+        background: linear-gradient(225deg, #ffffff, #e6e6e6);
+        box-shadow:  -20px 20px 60px #d9d9d9,
+                    20px -20px 60px #ffffff;
+                    background: linear-gradient(225deg, #2bc6c2, #0d706d);
+                    box-shadow:  10px -10px 30px #a2f5f3,
+                                -10px 10px 30px #abeeec;
+    } */
+    .menu_contenedor {
+        position: relative;
+        /* display: grid;
+        grid-template-columns: repeat(2, 1fr); */
+        
+    
+    }
+    
+    
+    .ingreso_contenedor {
+        /* display: grid;
+        grid-template-columns: 1 / 2; */
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+    
+    .egreso_contenedor {
+        /* display: grid;
+        grid-template-columns: 2 / 2; */
+        left: 50%;
+        top: 100%;
+        transform: translate(-50%, 100%);
+    }
+    
+}
+
+
+
+
+
 .presupuesto_ingreso {
     margin-bottom: 10px;
     background-color: #07fd9770;
-    border-bottom: #28B9B5 solid 8px;
+    /* border-bottom: #28B9B5 solid 8px; */
     /* border-radius: 12px; */
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
+    background: linear-gradient(45deg, #2bc6c2, #0d706d);
+    box-shadow:  10px -10px 30px #a2f5f3,
+                -10px 10px 30px #abeeec;
 }
 
 .presupuesto_egreso {
     background-color: #fa5b5bea;
-    border-top: #FF5049 solid 1px;
+    /* border-top: #FF5049 solid 1px; */
     /* border-radius: 12px; */
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
+    /* border-radius: 50px; */
+    background: linear-gradient(145deg, #ff564e, #bd3e3a);
+    box-shadow:  10px 10px 30px #f6c1bf,
+                -10px -10px 30px #fdcdcb;
 }
 
 .presupuesto_ingreso--texto,
@@ -230,8 +357,8 @@ h2 {
     margin-bottom: 15px;
 }
 
-.ingreso_titulo { color: #28B9B5; }
-.egreso_titulo { color: #FF5049; }
+.ingreso_titulo { color: #28B9B5; margin-top: 16px;; }
+.egreso_titulo { color: #FF5049; margin-top: 16px;}
 
 .elemento {
     padding: 13px;

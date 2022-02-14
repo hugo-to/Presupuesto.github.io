@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aplicación Presupuesto</title>
     <link href="css/estilos.css" rel='stylesheet'/>
+    <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 600px)"" >
 </head>
 <!-- header -->
 <body onload='cargarApp()'>
@@ -56,41 +57,45 @@
 <!-- ingreso y egreso -->
 <div class="menu_contenedor">
     <div class="contenedor limpiarEstilos">
-        <div class="ingreso">
-            <h2 class="ingreso_titulo">INGRESOS</h2>
-            <div id="lista-ingresos">
-                <div class="elemento limpiarEstilos">
-                    <div class="elemento_descripcion">Salario</div>
-                    <div class="derecha limpiarEstilos">
-                        <div class="elemento_valor">+ $ 2,200.00</div>
-                        <div class="elemento_eliminar">
-                            <button class="elemento_eliminar--btn">
-                                <ion-icon name="close"></ion-icon>
-                            </button>
+        <div class="ingreso_contendor">
+            <div class="ingreso">
+                <h2 class="ingreso_titulo">INGRESOS</h2>
+                <div id="lista-ingresos">
+                    <div class="elemento limpiarEstilos">
+                        <div class="elemento_descripcion">Salario</div>
+                        <div class="derecha limpiarEstilos">
+                            <div class="elemento_valor">+ $ 2,200.00</div>
+                            <div class="elemento_eliminar">
+                                <button class="elemento_eliminar--btn">
+                                    <ion-icon name="close"></ion-icon>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="egreso">
-            <h2 class="egreso_titulo">EGRESOS</h2>
-            <div id="lista-egresos">
-                <div class="elemento limpiarEstilos">
-                    <div class="elemento_descripcion">Alquiler </div>
-                    <div class="derecha limpiarEstilos">
-                        <div class="elemento_valor">- 900.00</div>
-                        <div class="elemento_porcentaje">21%</div>
-                        <div class="elemento_eliminar">
-                            <button class="elemento_eliminar--btn">
-                                <ion-icon name="close"></ion-icon>
-                            </button>
+        <div class="egreso_contenedor">
+            <div class="egreso">
+                <h2 class="egreso_titulo">EGRESOS</h2>
+                <div id="lista-egresos">
+                    <div class="elemento limpiarEstilos">
+                        <div class="elemento_descripcion">Alquiler </div>
+                        <div class="derecha limpiarEstilos">
+                            <div class="elemento_valor">- 900.00</div>
+                            <div class="elemento_porcentaje">21%</div>
+                            <div class="elemento_eliminar">
+                                <button class="elemento_eliminar--btn">
+                                    <ion-icon name="close"></ion-icon>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
     </div>
 </div>
-
 
     <script src='js/Dato.js'></script>
     <script src='js/Ingreso.js'></script>
