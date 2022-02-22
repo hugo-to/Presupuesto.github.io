@@ -187,28 +187,31 @@ div .agregar {
                                 -10px 10px 30px #abeeec;
     } */
     .menu_contenedor {
-        position: relative;
-        /* display: grid;
-        grid-template-columns: repeat(2, 1fr); */
-        
-    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
     }
     
     
     .ingreso_contenedor {
         /* display: grid;
         grid-template-columns: 1 / 2; */
-        left: 0;
-        top: 50%;
-        transform: translate(0, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
     }
     
     .egreso_contenedor {
         /* display: grid;
         grid-template-columns: 2 / 2; */
-        left: 50%;
-        top: 100%;
-        transform: translate(-50%, 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
     }
     
 }

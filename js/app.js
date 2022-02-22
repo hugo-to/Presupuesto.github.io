@@ -10,6 +10,19 @@ const egresos = [
     new Egreso('Diamantes', 44400)
 ];
 
+
+
+
+
+
+// const dineroIngresoString = JSON.stringify(ingresos);
+// localStorage.setItem('ingresos', dineroIngresoString);
+
+
+// const dineroEgresoString = JSON.stringify(egresos);
+// localStorage.setItem('egresos', dineroEgresoString);
+
+
 let cargarApp = ()=>{
     cargarCabecero();
     cargarIngresos();
@@ -58,6 +71,7 @@ const cargarIngresos = ()=>{
 }
 
 const crearIngresoHTML = (ingreso)=>{
+    let newIngreso = JSON.parse(JSON.stringify(ingreso));
     let ingresoHTML = `
     <div class="elemento limpiarEstilos">
     <div class="elemento_descripcion">${ingreso.descripcion}</div>
@@ -72,8 +86,25 @@ const crearIngresoHTML = (ingreso)=>{
     </div>
 </div>
     `;
+    localStorage.setItem('ingresos', JSON.stringify(ingresos));
+
     return ingresoHTML;
 }
+
+// function guardarIngreso(newIngreso) {
+//     let miIngresoArray = JSON.parse(localStorage.getItem('ingresos')) || [];
+//     miIngresoArray.push(newIngreso);
+//     let miIngresoArrayJSON= JSON.stringify(miIngresoArray);
+//     localStorage.setItem('ingresos', miIngresoArrayJSON);
+    
+
+// }
+// function getNewIngreso(){
+//     let ultimoIngresoId = localStorage.getItem('ultimoIngreso') ||"-1";
+//     let newIngresoId = JSON.parse(ultimoIngresoId) + 1;
+//     localStorage.setItem('ultimoIngreso', JSON.stringify(newIngresoId));
+//     return new Ingreso(newIngresoId);
+// }
 
 const eliminarIngreso = (id)=>{
     let indiceEliminar = ingresos.findIndex( ingreso => ingreso.id === id);
@@ -135,3 +166,15 @@ let agregarDato = () => {
         }
     }
 }
+
+function guardarDinero(){
+
+}
+
+document.addEventListener('DOMContentLoaded', function(event) {
+    let dineroIngresoString = JSON.stringify(ingresos);
+    localStorage.setItem('ingresos', dineroIngresoString);
+    let dineroEgresoString = JSON.stringify(egresos);
+    localStorage.setItem('egresos', dineroEgresoString);
+    
+});
